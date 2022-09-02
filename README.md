@@ -3,7 +3,15 @@
 
 ### Steps To Run Detection On camera trap Images: 
 
-1. To run detection on images_directory, run the following command: <br />
+1. To merge subfolders and create one separate folder, run the following command: <br />
+```bash
+python merge_folders.py --folders_path 'D:\images_directory\folders_with_subfolders'### path of folder to subfolders. 
+                        --merge_folder_path 'D:\images_directory\merged_folder'     ### path of merged folder that contains all the images in one folder. 
+```
+
+
+
+2. To run detection on images_directory, run the following command: <br />
 ```bash 
 python detect.py --source 'D:\images_directory\site0001'                             ### path to directory containing images (Note: Step 1 should be already completed.)
                  --weights runs/train/wii_28_072/weights/best.pt                     ### path to model weights.
