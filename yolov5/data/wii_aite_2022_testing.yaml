@@ -35,42 +35,42 @@ path: ../
 test: share_iiit_raw_autoseg_testing_24-8-2022/
 
 # Classes
-# nc: 82  # number of classes
-# names: ['anti_cerv', 'arct_coll','athe_macr' ,'axis_axis', 'axis_porc','bird_bird','blan_blan','bos__fron','bos__gaur','bos__indi',
-# 'bose_trag-Boselaphus tragocamelus','budo_taxi-Budorcas taxicolor','cani_aure-Canis aureus','cani_lupu-Canis lupus','capr_thar-Capricornis thar',
-# 'cato_temm-Catopuma temminckii','catt_catt-Cattle','catt_kill','cuon_alpi-Cuon alpinus','dome_cats-Domestic cat','dome_dogs-Domestic dog','elep_maxi-Elephas maximus',      
-# 'equu_caba-Equus caballus','feli_chau-Felis chaus','feli_sylv-Felis sylvestris','fran_pond-Francolinus pondicerianus','gall_gall-Gallus gallus',
-# 'gall_lunu-Galloperdix lunulata','gall_sonn-Gallus sonneratii','gall_spad-Galloperdix spadicea','gaze_benn-Gazella bennettii','goat_sheep','herp_edwa-Herpestes edwardsii','herp_fusc-Herpestes fuscus','herp_smit-Herpestes smithii',
-# 'herp_urva-Herpestes urva','herp_vitt-Herpestes vitticollis','homo_sapi','hyae_hyae-Hyaena hyaena','hyst_brac-Hystrix brachyura','hyst_indi-Hystrix indica',
-# 'lept_java-Leptoptilos javanicus','lepu_nigr-Lepus nigricollis','lutr_pers-Lutrogale perspicillata','maca_arct-Macaca arctoides',
-# 'maca_mula-Macaca mulatta','maca_munz-Macaca munzala','maca_radi-Macaca radiata','maca_sile-Macaca silenus','mani_cras-Manis crassicaudata',
-# 'mart_flav-Martes flavigula', 'mart_gwat-Martes gwatkinsii','mell_cape-Mellivora capensis','melu_ursi',
-# 'mosc_indi-Moschiola indica','munt_munt-Muntiacus muntjak','naem_gora-Naemorhedus goral','neof_nebu-Neofelis nebulosa','nilg_hylo-Nilgiritragus hylocrius',
-# 'pagu_larv-Paguma larvata-Masked Palm Civet','pant_pard-Panthera pardus','pant_tigr','para-jerd-Paradoxurus jerdoni','para_herm-Paradoxurus hermaphroditus',      
-# 'pavo_cris','prio_beng-Prionailurus bengalensis','prio_rubi-Prionailurus rubiginosus','prio_vive-Prionailurus viverrinus','rusa_unic-Rusa unicolor',
-# 'semn_ente-Semnopithecus entellus','semn_john+Semnopithecus johnii','sus__scro-Sus scrofa','tetr_quad-Tetracerus quadricornis','trac_john-Trachypithecus johnii',
-# 'trac_pile-Trachypithecus pileatus','ursu_thib-Ursus thibetanus','vara_beng-Varanus bengalensis','vara_salv-Varanus salvator','vehi_vehi',
-# 'vive_indi-Viverricula indica','vive_zibe-Viverra zibetha','vulp_beng']
-
-
-nc: 98
-names: ['anat_elli','anti_cerv','arct_coll','athe_macr','axis_axis','axis_porc','bats_bats','bird_bird','blan_blan','bos__fron','bos__gaur','bos__indi',
-'bose_trag-Boselaphus tragocamelus','budo_taxi-Budorcas taxicolor','call_pyge-Callosciurus pygerythrus','came_came-Camel','cani_aure-Canis aureus',
-'cani_lupu-Canis lupus','capr_hisp-Caprolagus hispidus','capr_thar-Capricornis thar','cato_temm-Catopuma temminckii','catt_catt-Cattle','catt_kill',
-'cuon_alpi-Cuon alpinus','dome_cats-Domestic cat','dome_dogs-Domestic dog','elep_maxi-Elephas maximus','equu_caba-Equus caballus','feli_chau-Felis chaus',
-'feli_sylv-Felis sylvestris','fran_pond-Francolinus pondicerianus','funa_palm-Funambulus palmarum','gall_gall-Gallus gallus','gall_lunu-Galloperdix lunulata',
-'gall_sonn-Gallus sonneratii','gall_spad-Galloperdix spadicea','gaze_benn-Gazella bennettii','goat_sheep','hela_mala-Helarctos malayanus','herp_edwa-Herpestes edwardsii',
-'herp_fusc-Herpestes fuscus','herp_smit-Herpestes smithii','herp_urva-Herpestes urva','herp_vitt-Herpestes vitticollis','homo_sapi','hyae_hyae-Hyaena hyaena',
-'hyst_brac-Hystrix brachyura','hyst_indi-Hystrix indica','lept_java-Leptoptilos javanicus','lepu_nigr-Lepus nigricollis','lutr_lutr-Lutra lutra',
-'lutr_pers-Lutrogale perspicillata','maca_arct-Macaca arctoides','maca_assa-Macaca assamensis','maca_leon-Macaca leonina','maca_maca-Macaque',
+nc: 82  # number of classes
+names: ['anti_cerv', 'arct_coll','athe_macr' ,'axis_axis', 'axis_porc','bird_bird','blan_blan','bos__fron','bos__gaur','bos__indi',
+'bose_trag-Boselaphus tragocamelus','budo_taxi-Budorcas taxicolor','cani_aure-Canis aureus','cani_lupu-Canis lupus','capr_thar-Capricornis thar',
+'cato_temm-Catopuma temminckii','catt_catt-Cattle','catt_kill','cuon_alpi-Cuon alpinus','dome_cats-Domestic cat','dome_dogs-Domestic dog','elep_maxi-Elephas maximus',      
+'equu_caba-Equus caballus','feli_chau-Felis chaus','feli_sylv-Felis sylvestris','fran_pond-Francolinus pondicerianus','gall_gall-Gallus gallus',
+'gall_lunu-Galloperdix lunulata','gall_sonn-Gallus sonneratii','gall_spad-Galloperdix spadicea','gaze_benn-Gazella bennettii','goat_sheep','herp_edwa-Herpestes edwardsii','herp_fusc-Herpestes fuscus','herp_smit-Herpestes smithii',
+'herp_urva-Herpestes urva','herp_vitt-Herpestes vitticollis','homo_sapi','hyae_hyae-Hyaena hyaena','hyst_brac-Hystrix brachyura','hyst_indi-Hystrix indica',
+'lept_java-Leptoptilos javanicus','lepu_nigr-Lepus nigricollis','lutr_pers-Lutrogale perspicillata','maca_arct-Macaca arctoides',
 'maca_mula-Macaca mulatta','maca_munz-Macaca munzala','maca_radi-Macaca radiata','maca_sile-Macaca silenus','mani_cras-Manis crassicaudata',
-'mart_flav-Martes flavigula','mart_gwat-Martes gwatkinsii','mell_cape-Mellivora capensis','melo_pers','melu_ursi','mosc_indi-Moschiola indica',
-'munt_munt-Muntiacus muntjak','naem_gora-Naemorhedus goral','neof_nebu-Neofelis nebulosa','nilg_hylo-Nilgiritragus hylocrius',
-'pagu_larv-Paguma larvata-Masked Palm Civet','pant_pard-Panthera pardus','pant_tigr','para-jerd-Paradoxurus jerdoni','para_herm-Paradoxurus hermaphroditus',
-'pard_marm-Pardofelis marmorata','pavo_cris','prio_beng-Prionailurus bengalensis','prio_pard-Prionodon pardicolor','prio_rubi-Prionailurus rubiginosus',
-'prio_vive-Prionailurus viverrinus','rusa_unic-Rusa unicolor','semn_ente-Semnopithecus entellus','semn_john+Semnopithecus johnii','sus__scro-Sus scrofa',
-'tetr_quad-Tetracerus quadricornis','trac_john-Trachypithecus johnii','trac_pile-Trachypithecus pileatus','tree_shre','ursu_thib-Ursus thibetanus',
-'vara_beng-Varanus bengalensis','vara_salv-Varanus salvator','vehi_vehi','vive_indi-Viverricula indica','vive_zibe-Viverra zibetha','vulp_beng','vulp_vulp']
+'mart_flav-Martes flavigula', 'mart_gwat-Martes gwatkinsii','mell_cape-Mellivora capensis','melu_ursi',
+'mosc_indi-Moschiola indica','munt_munt-Muntiacus muntjak','naem_gora-Naemorhedus goral','neof_nebu-Neofelis nebulosa','nilg_hylo-Nilgiritragus hylocrius',
+'pagu_larv-Paguma larvata-Masked Palm Civet','pant_pard-Panthera pardus','pant_tigr','para-jerd-Paradoxurus jerdoni','para_herm-Paradoxurus hermaphroditus',      
+'pavo_cris','prio_beng-Prionailurus bengalensis','prio_rubi-Prionailurus rubiginosus','prio_vive-Prionailurus viverrinus','rusa_unic-Rusa unicolor',
+'semn_ente-Semnopithecus entellus','semn_john+Semnopithecus johnii','sus__scro-Sus scrofa','tetr_quad-Tetracerus quadricornis','trac_john-Trachypithecus johnii',
+'trac_pile-Trachypithecus pileatus','ursu_thib-Ursus thibetanus','vara_beng-Varanus bengalensis','vara_salv-Varanus salvator','vehi_vehi',
+'vive_indi-Viverricula indica','vive_zibe-Viverra zibetha','vulp_beng']
+
+
+# nc: 98
+# names: ['anat_elli','anti_cerv','arct_coll','athe_macr','axis_axis','axis_porc','bats_bats','bird_bird','blan_blan','bos__fron','bos__gaur','bos__indi',
+# 'bose_trag-Boselaphus tragocamelus','budo_taxi-Budorcas taxicolor','call_pyge-Callosciurus pygerythrus','came_came-Camel','cani_aure-Canis aureus',
+# 'cani_lupu-Canis lupus','capr_hisp-Caprolagus hispidus','capr_thar-Capricornis thar','cato_temm-Catopuma temminckii','catt_catt-Cattle','catt_kill',
+# 'cuon_alpi-Cuon alpinus','dome_cats-Domestic cat','dome_dogs-Domestic dog','elep_maxi-Elephas maximus','equu_caba-Equus caballus','feli_chau-Felis chaus',
+# 'feli_sylv-Felis sylvestris','fran_pond-Francolinus pondicerianus','funa_palm-Funambulus palmarum','gall_gall-Gallus gallus','gall_lunu-Galloperdix lunulata',
+# 'gall_sonn-Gallus sonneratii','gall_spad-Galloperdix spadicea','gaze_benn-Gazella bennettii','goat_sheep','hela_mala-Helarctos malayanus','herp_edwa-Herpestes edwardsii',
+# 'herp_fusc-Herpestes fuscus','herp_smit-Herpestes smithii','herp_urva-Herpestes urva','herp_vitt-Herpestes vitticollis','homo_sapi','hyae_hyae-Hyaena hyaena',
+# 'hyst_brac-Hystrix brachyura','hyst_indi-Hystrix indica','lept_java-Leptoptilos javanicus','lepu_nigr-Lepus nigricollis','lutr_lutr-Lutra lutra',
+# 'lutr_pers-Lutrogale perspicillata','maca_arct-Macaca arctoides','maca_assa-Macaca assamensis','maca_leon-Macaca leonina','maca_maca-Macaque',
+# 'maca_mula-Macaca mulatta','maca_munz-Macaca munzala','maca_radi-Macaca radiata','maca_sile-Macaca silenus','mani_cras-Manis crassicaudata',
+# 'mart_flav-Martes flavigula','mart_gwat-Martes gwatkinsii','mell_cape-Mellivora capensis','melo_pers','melu_ursi','mosc_indi-Moschiola indica',
+# 'munt_munt-Muntiacus muntjak','naem_gora-Naemorhedus goral','neof_nebu-Neofelis nebulosa','nilg_hylo-Nilgiritragus hylocrius',
+# 'pagu_larv-Paguma larvata-Masked Palm Civet','pant_pard-Panthera pardus','pant_tigr','para-jerd-Paradoxurus jerdoni','para_herm-Paradoxurus hermaphroditus',
+# 'pard_marm-Pardofelis marmorata','pavo_cris','prio_beng-Prionailurus bengalensis','prio_pard-Prionodon pardicolor','prio_rubi-Prionailurus rubiginosus',
+# 'prio_vive-Prionailurus viverrinus','rusa_unic-Rusa unicolor','semn_ente-Semnopithecus entellus','semn_john+Semnopithecus johnii','sus__scro-Sus scrofa',
+# 'tetr_quad-Tetracerus quadricornis','trac_john-Trachypithecus johnii','trac_pile-Trachypithecus pileatus','tree_shre','ursu_thib-Ursus thibetanus',
+# 'vara_beng-Varanus bengalensis','vara_salv-Varanus salvator','vehi_vehi','vive_indi-Viverricula indica','vive_zibe-Viverra zibetha','vulp_beng','vulp_vulp']
 
 # nc: 98
 # names: ['mani_cras-Manis crassicaudata', 'maca_munz-Macaca munzala', 'maca_radi-Macaca radiata', 'athe_macr', 'vulp_beng', 'lept_java-Leptoptilos javanicus',
