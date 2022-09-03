@@ -1,4 +1,5 @@
 import os
+from re import sub
 import shutil
 import argparse  
 
@@ -27,9 +28,10 @@ list_dir = []
 def get_subdirs(dir):
     "Get a list of immediate subdirectories"
     return next(os.walk(dir))[1]
+    # return os.listdir(dir)
 
 list_dir = get_subdirs(FLAGS.folders_path)
-print(list_dir[0])
+print(len(list_dir))
 # enumerate on list_dir to get the content of all the folders ans store it in a dictionary
 content_list = {}
 for index, val in enumerate(list_dir):
@@ -39,14 +41,22 @@ for index, val in enumerate(list_dir):
 # create merge_folder if not exists
 previous_ = len(os.listdir(FLAGS.merge_folder_path))
 print("no. of current train labels: ", previous_)
-
+image_file= {}
 # loop through the list of folders
 for sub_dir in content_list:
     # loop through the contents of the 
     # list of folders
     for contents in content_list[sub_dir]:
+        count=0
         # make the path of the content to move 
-        path_to_content = sub_dir + "/" + contents  
+        path_to_content = sub_dir + "/" + contents 
+        if contents not in image_file:
+            count=1
+            image_file.update({contents:count})
+        else:
+            count=image_file[contents]+1
+            image_file.update({contents:count})
+            path_to_content = sub_dir + "/" + contents + '_' + count
         # make the path with the current folder
         dir_to_move = os.path.join(FLAGS.folders_path, path_to_content)
         # move the file
