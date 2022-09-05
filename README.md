@@ -41,7 +41,7 @@ python detect.py --source 'D:\images_directory\site0001'                        
                  --exist-ok                                                          ### if output directory --name already exists and continue detection results to the same path
                  --empty_path D:\empty_files                                         ### path to save empty image files.
 ```
-Arguments to change to run on different image directory includes : ```--source``` and ```--name```. 
+Arguments to additionally include to resume detection on different image directory includes : ```--resume``` and ```--exist-ok```. 
 
 
 
