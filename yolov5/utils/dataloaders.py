@@ -186,14 +186,27 @@ class _RepeatSampler:
 
 class LoadImages:
     # YOLOv5 image/video dataloader, i.e. `python detect.py --source image.jpg/vid.mp4`
-    def __init__(self, path, img_size=640, stride=32, auto=True, empty_path=None):
+    def __init__(self, path, img_size=640, stride=32, auto=True, resume=False, dir_path=None, empty_path=None):
         files = []
         for p in sorted(path) if isinstance(path, (list, tuple)) else [path]:
             p = str(Path(p).resolve())
             if '*' in p:
                 files.extend(sorted(glob.glob(p, recursive=True)))  # glob
             elif os.path.isdir(p):
-                files.extend(sorted(glob.glob(os.path.join(p, '*.*'))))  # dir
+                all_files = []
+                
+                if resume:
+                    all_files.extend(sorted(glob.glob(os.path.join(p, '*.*'))))  # dir
+                    file_names = [(file.split('/')[-1].split('.')[0], file.split('/')[-1].split('.')[1]) for file in all_files]
+                    # import pdb; pdb.set_trace()
+                    # include files only whose labels are not generated yet in the destination path. (exclude the ones whose predictions were already generated)
+                    existing_files = os.listdir(os.path.join(dir_path, 'labels'))
+                    existing_file_names = [file.split('.')[0] for file in existing_files]
+                    diff_files = [str(path) + file + '.' + extension for (file, extension) in file_names if file not in existing_file_names]
+                    files.extend(diff_files)
+                else:
+                    files.extend(sorted(glob.glob(os.path.join(p, '*.*'))))  # dir
+                print("No of files to be processed are: {} ".format(len(files)))
             elif os.path.isfile(p):
                 files.append(p)  # files
             else:
@@ -250,9 +263,9 @@ class LoadImages:
             while(not found):
                 ## case 1 image corrupt
                 try:
-                    self.count += 1
                     if self.count == self.nf:
                         raise StopIteration
+                    self.count += 1
                     img0 = cv2.imread(path)        # BGR
                     cv2.imwrite(img0, path)        # write save image to remove corrupt issues. 
                     img0 = cv2.imread(path)        # read uncorrupt image.
@@ -266,6 +279,8 @@ class LoadImages:
                     img = np.ascontiguousarray(img)
 
                 except:
+                    if self.count == self.nf:
+                        raise StopIteration
                     ## handle empty image case. 
                     ## move this empty file to different directory.
                     print("haven't found yet! I will search for new image.")
@@ -275,8 +290,6 @@ class LoadImages:
                         os.mkdir(dest_path)
                     shutil.move(path, dest_path)       
                     # set new path
-                    if self.count == self.nf:
-                        raise StopIteration
                     path = self.files[self.count]
                 if img is not None: 
                     found = True

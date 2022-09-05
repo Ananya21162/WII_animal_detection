@@ -74,6 +74,7 @@ def run(
         hide_conf=False,  # hide confidences
         half=False,  # use FP16 half-precision inference
         dnn=False,  # use OpenCV DNN for ONNX inference
+        resume=False,   # resume detection of a repository. 
         empty_path=None, # Path to folder to move empty images to.
 ):
     source = str(source)
@@ -102,7 +103,7 @@ def run(
         dataset = LoadStreams(source, img_size=imgsz, stride=stride, auto=pt)
         bs = len(dataset)  # batch_size
     else:
-        dataset = LoadImages(source, img_size=imgsz, stride=stride, auto=pt, empty_path=empty_path)
+        dataset = LoadImages(source, img_size=imgsz, stride=stride, auto=pt, resume=resume, dir_path=save_dir, empty_path=empty_path)
         bs = 1  # batch_size
     vid_path, vid_writer = [None] * bs, [None] * bs
 
@@ -243,6 +244,7 @@ def parse_opt():
     parser.add_argument('--hide-conf', default=False, action='store_true', help='hide confidences')
     parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
+    parser.add_argument('--resume', action='store_true', help='resume detection for a folder')
     parser.add_argument('--empty_path', type=str, default=ROOT, help='path to save empty images if exist in original folder.')
     opt = parser.parse_args()
     opt.imgsz *= 2 if len(opt.imgsz) == 1 else 1  # expand
