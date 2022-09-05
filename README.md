@@ -11,7 +11,7 @@ python merge_folders.py --folders_path 'D:\images_directory\folders_with_subfold
 
 
 
-2. To run detection on images_directory, run the following command: <br />
+2. To run detection on a new folder images_directory, run the following command: <br />
 ```bash 
 python detect.py --source 'D:\images_directory\site0001'                             ### path to directory containing images (Note: Step 1 should be already completed.)
                  --weights runs/train/wii_28_072/weights/best.pt                     ### path to model weights.
@@ -25,6 +25,24 @@ python detect.py --source 'D:\images_directory\site0001'                        
                  --empty_path D:\empty_files                                         ### path to save empty image files.
 ```
 Arguments to change to run on different image directory includes : ```--source``` and ```--name```. 
+
+To resume detection on images_directory and its final directory exists: <br /> 
+```bash
+python detect.py --source 'D:\images_directory\site0001'                             ### path to directory containing images (Note: Step 1 should be already completed.)
+                 --weights runs/train/wii_28_072/weights/best.pt                     ### path to model weights.
+                 --data data/wii_aite_2022_testing.yaml                              ### path to yaml file containing species names 
+                 --img 640                                                           ### image size 
+                 --save-txt                                                          ### save label txt files for every image.  
+                 --save-conf                                                         ### saves confidences in label txt files.  
+                 --name yolo_test_24_08_site0001                                     ### folder name created in ```runs/detect/``` with labels  
+                 --conf-thres 0.001                                                  ### confidence threshold 0.001
+                 --iou-thres 0.6                                                     ### iou_threshold 0.6
+                 --resume                                                            ### resumes detection on the --source folder i.e. will generate predictions whose label files doesn't already exist. 
+                 --exist-ok                                                          ### if output directory --name already exists and continue detection results to the same path
+                 --empty_path D:\empty_files                                         ### path to save empty image files.
+```
+Arguments to change to run on different image directory includes : ```--source``` and ```--name```. 
+
 
 
 
